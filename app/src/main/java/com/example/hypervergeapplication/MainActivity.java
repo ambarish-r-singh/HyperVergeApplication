@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 HVDocConfig hvDocConfig = new HVDocConfig();
                 HVDocConfig.Document document = HVDocConfig.Document.OTHER;
-                document.setAspectRatio(0.625f); // This aspect ratio can be modified based on the document (check next page)
+                document.setAspectRatio(0.625f);
                 hvDocConfig.setDocumentType(document);
                 hvDocConfig.setShouldShowReviewScreen(true);
                 hvDocConfig.setPadding(0.05f);
@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     // TODO: remove hardcoded value
-                    final String imageUri = "/data/user/0/com.example.hypervergeapplication/files/hv/1601658901746.jpg";
-                    // final String imageUri = val; //This is the result from document capture if the error is non null.
+                    //final String imageUri = "/data/user/0/com.example.hypervergeapplication/files/hv/1601658901746.jpg";
+                     final String imageUri = val; //This is the result from document capture if the error is non null.
 
                     System.out.println("Invoke HyperVerge OCR API ");
                     HVNetworkHelper.makeOCRCall(MainActivity.this, Constants.HYPERVERGE_KYC_ENDPOINT, imageUri, params, headers, handleHVOcrCallCompletion());
